@@ -9,7 +9,7 @@ import pickle
 import time
 
 def model_output(X):
-    model = pickle.load(open('rf_classification.sav','rb'))
+    model = pickle.load(open('./rf_classification.sav','rb'))
     return model.predict(X)
 
 
