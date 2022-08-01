@@ -248,8 +248,8 @@ rf = RandomForestClassifier(n_estimators = 300,random_state = 1, max_depth=30,n_
 rf.fit(x_train,y_train)
 rf_pred=rf.predict(x_test)
 
-import pickle 
-pickle.dump(rf,open('rf_classification.sav','wb'))
+import joblib
+joblib.dump(rf,'rf_classification.joblib')
 
 
 
@@ -325,8 +325,8 @@ rf_pred=rf.predict(x_test)
 # In[ ]:
 
 
-import pickle
-pickle.dump(rf,open('rf_regression.sav','wb'))
+import joblib
+joblib.dump(rf,'rf_regression.joblib')
 
 
 # In[ ]:

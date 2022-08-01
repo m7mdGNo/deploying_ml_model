@@ -11,7 +11,7 @@ import joblib
 
 def model_output(X):
     # model = pickle.load(open('./rf_regression.sav','rb'))
-    model = joblib.load("./rf_regression.sav")
+    model = joblib.load("./rf_regression.joblib")
     return model.predict(X)
 
 
