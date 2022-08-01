@@ -249,7 +249,7 @@ rf.fit(x_train,y_train)
 rf_pred=rf.predict(x_test)
 
 import joblib
-joblib.dump(rf,'rf_classification.joblib')
+joblib.dump(rf,'rf_classification.h5',compress=True)
 
 
 
@@ -326,7 +326,7 @@ rf_pred=rf.predict(x_test)
 
 
 import joblib
-joblib.dump(rf,'rf_regression.joblib')
+joblib.dump(rf,'rf_regression.h5',compress=True)
 
 
 # In[ ]:

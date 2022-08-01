@@ -9,8 +9,8 @@ import pickle,joblib
 import time
 
 def model_output(X):
-    model = pickle.load(open('./rf_classification.sav','rb'))
-    # model = joblib.load("./rf_classification.joblib")
+    # model = pickle.load(open('./rf_classification.sav','rb'))
+    model = joblib.load("./rf_classification.h5")
     return model.predict(X)
 
 
