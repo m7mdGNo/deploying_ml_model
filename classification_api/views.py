@@ -22,10 +22,16 @@ class input_features(ListCreateAPIView):
     def post(self, request, *args, **kwargs):
         start_time = time.time()
         data_json = request.data
+        print(list(data_json.values())[0])
         try:
-            data = np.array(list(data_json.values())[1::],dtype=np.float64)
-            data = data.reshape(-1, 1)
-            data = data.T
+            try:
+                data = np.array(list(data_json.values())[::],dtype=np.float64)
+                data = data.reshape(-1, 1)
+                data = data.T
+            except:
+                data = np.array(list(data_json.values())[1::],dtype=np.float64)
+                data = data.reshape(-1, 1)
+                data = data.T
             
 
         except ValueError as ve:
