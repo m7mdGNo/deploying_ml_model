@@ -5,11 +5,11 @@ from .serializers import model_serializer
 from rest_framework.response import Response
 import numpy as np
 from rest_framework import status
-import pickle
+import pickle,joblib
 import time
 
 def model_output(X):
-    model = pickle.load(open('./rf_classification.sav','rb'))
+    model = joblib.load("./rf_classification.sav")
     return model.predict(X)
 
 

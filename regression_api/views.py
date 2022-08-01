@@ -7,9 +7,11 @@ import numpy as np
 from rest_framework import status
 import pickle
 import time
+import joblib
 
 def model_output(X):
-    model = pickle.load(open('./rf_regression.sav','rb'))
+    # model = pickle.load(open('./rf_regression.sav','rb'))
+    model = joblib.load("./rf_regression.sav")
     return model.predict(X)
 
 

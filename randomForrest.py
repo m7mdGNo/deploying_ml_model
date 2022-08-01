@@ -130,7 +130,6 @@ num_data['DebtToIncomeRatio'].fillna(value=num_data['DebtToIncomeRatio'].median(
 # In[ ]:
 
 
-plt.figure(figsize=(45,10))
 num_data.EmploymentStatusDuration = num_data.EmploymentStatusDuration.fillna(num_data.EmploymentStatusDuration.mode().iloc[0])
 
 
